@@ -1,0 +1,19 @@
+function LetterChanges(str) { 
+
+  // code goes here  
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  let newAlphabet = 'bcdEfghIjklmnOpqrstUvwxyzA'
+  let answer = ''
+
+  for(i=0; i<str.length; i++){
+    if(alphabet.indexOf(str[i])!==-1){
+      answer += newAlphabet.charAt(alphabet.indexOf(str[i]));
+    }else{
+      answer += str[i]
+    }
+  }
+return answer;
+}
+   
+// keep this function call here 
+console.log(LetterChanges(readline()));

@@ -1,0 +1,14 @@
+function EquivalentKeypresses(strArr) { 
+
+  // code goes here  
+  const backspace = (string, keystroke) =>{
+    return keystroke === '-B' ? string.slice(0,-1) : string + keystroke;
+  }
+  let pressOne = strArr[0].split(',')
+  let pressTwo = strArr[1].split(',')
+
+return pressOne.reduce(backspace,'') === pressTwo.reduce(backspace,'')
+}
+   
+// keep this function call here 
+console.log(EquivalentKeypresses(readline()));
